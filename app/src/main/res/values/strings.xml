@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ClientServerApp.kt</string>
+    <string name="joke_or_error_message">Joke or error message</string>
+</resources>
