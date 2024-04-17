@@ -37,7 +37,7 @@ interface JokeService {
         }
 
         companion object {
-            private const val URL = "https://official-joke-api.appspot.com/random_joke"
+            private const val URL = "https://official-joke-api.appspot.com/random_joke/"
         }
 
     }
