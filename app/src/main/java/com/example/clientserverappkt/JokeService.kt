@@ -1,6 +1,8 @@
 package com.example.clientserverappkt
 
 import com.google.gson.Gson
+import retrofit2.Call
+import retrofit2.http.GET
 import java.io.BufferedInputStream
 import java.io.BufferedReader
 import java.io.InputStreamReader
@@ -9,8 +11,11 @@ import java.net.URL
 import java.net.UnknownHostException
 
 interface JokeService {
-    fun joke(callback: ServerCallback)
 
+    @GET("random_joke")
+    fun joke() : Call<JokeCloud>
+
+    /*
     class Base(
         private val gson: Gson
     ): JokeService{
@@ -36,11 +41,13 @@ interface JokeService {
             }.start()
         }
 
+     */
+
         companion object {
             private const val URL = "https://official-joke-api.appspot.com/random_joke/"
         }
 
-    }
+
 }
 
 interface ServerCallback {
