@@ -13,7 +13,7 @@ class FakeModel(
     private var count = 0
 
     override fun fetch() {
-        // решена проблема с потоками
+
         java.util.Timer().schedule(object : TimerTask() {
             override fun run() {
                 if (count%2==1) {
