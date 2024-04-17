@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">ClientServerApp.kt</string>
     <string name="joke_or_error_message">Joke or error message</string>
+    <string name="no_connection_message">No internet connection</string>
+    <string name="service_unavailable_message">Service in unavailable</string>
 </resources>
