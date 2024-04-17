@@ -3,6 +3,8 @@ package com.example.clientserverappkt
 import android.content.Context
 import androidx.annotation.StringRes
 
+
+// Этот интерфейс предоставляет доступ к ресурсам приложения, таким как строки
 interface ManageResources {
     fun string(@StringRes resourceId: Int): String
 
