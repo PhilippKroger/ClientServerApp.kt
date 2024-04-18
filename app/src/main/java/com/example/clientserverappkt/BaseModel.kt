@@ -3,7 +3,6 @@ package com.example.clientserverappkt
 import retrofit2.Call
 import retrofit2.Response
 import java.net.UnknownHostException
-import javax.security.auth.callback.Callback
 
 
 class BaseModel(
@@ -18,7 +17,6 @@ class BaseModel(
 
     override fun fetch() {
         jokeService.joke().enqueue(object : retrofit2.Callback<JokeCloud> {
-
             override fun onResponse(call: Call<JokeCloud>, response: Response<JokeCloud>) {
                 if (response.isSuccessful) {
                     callback?.provideSuccess(response.body()!!.toJoke())
@@ -36,21 +34,6 @@ class BaseModel(
             }
 
         })
-        /*
-        jokeService.joke(object : ServerCallback {
-            override fun returnSuccess(data: JokeCloud) {
-                callback?.provideSuccess(data.toJoke())
-            }
-
-            override fun returnError(errorType: ErrorType) {
-                when (errorType) {
-                    ErrorType.NO_CONNECTION -> callback?.provideError(noConnection)
-                    ErrorType.OTHER -> callback?.provideError(serviceError)
-                }
-            }
-        })
-
-         */
     }
 
     override fun clear() {

@@ -2,7 +2,6 @@ package com.example.clientserverappkt
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import com.example.clientserverappkt.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

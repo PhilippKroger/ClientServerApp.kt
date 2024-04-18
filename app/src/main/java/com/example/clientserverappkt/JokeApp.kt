@@ -14,7 +14,6 @@ class JokeApp: Application() {
             .baseUrl("https://official-joke-api.appspot.com/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-        // viewModel = MainViewModel(FakeModel(ManageResources.Base(this)))
         viewModel = MainViewModel(
             BaseModel(
                 retrofit.create(JokeService::class.java),
