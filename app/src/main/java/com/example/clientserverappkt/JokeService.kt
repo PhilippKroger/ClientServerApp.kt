@@ -15,6 +15,9 @@ interface JokeService {
     @GET("random_joke")
     fun joke() : Call<JokeCloud>
 
+
+
+
     /*
     class Base(
         private val gson: Gson
