@@ -8,7 +8,9 @@ class MainActivity : AppCompatActivity() {
     private lateinit var viewModel: MainViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         val binding = ActivityMainBinding.inflate(layoutInflater)
+
         setContentView(binding.root)
 
         viewModel = (application as JokeApp).viewModel
@@ -25,7 +27,6 @@ class MainActivity : AppCompatActivity() {
             }
         })
     }
-
 
     override fun onDestroy() {
         super.onDestroy()

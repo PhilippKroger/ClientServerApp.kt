@@ -2,11 +2,10 @@ package com.example.clientserverappkt
 
 
 class MainViewModel(private val model: Model<Joke, Error>) {
+
     private var textCallback: TextCallback =TextCallback.Empty()
 
-    fun getJoke() {
-        model.fetch()
-    }
+    fun getJoke() { model.fetch() }
 
     //  инициализируется объект MainViewModel
     fun init(textCallback: TextCallback) {

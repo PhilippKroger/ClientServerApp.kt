@@ -32,15 +32,10 @@ class BaseModel(
                     callback?.provideError(serviceError)
                 }
             }
-
         })
     }
 
-    override fun clear() {
-        callback = null
-    }
+    override fun clear() { callback = null }
 
-    override fun init(resultCallback: ResultCallback<Joke, Error>) {
-        callback = resultCallback
-    }
+    override fun init(resultCallback: ResultCallback<Joke, Error>) { callback = resultCallback }
 }
