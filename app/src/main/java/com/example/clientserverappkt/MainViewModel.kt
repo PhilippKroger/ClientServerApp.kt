@@ -1,14 +1,11 @@
 package com.example.clientserverappkt
 
-import androidx.lifecycle.ViewModel
-import org.w3c.dom.Text
 
 class MainViewModel(private val model: Model<Joke, Error>) {
+
     private var textCallback: TextCallback =TextCallback.Empty()
 
-    fun getJoke() {
-        model.fetch()
-    }
+    fun getJoke() { model.fetch() }
 
     //  инициализируется объект MainViewModel
     fun init(textCallback: TextCallback) {
@@ -22,7 +19,6 @@ class MainViewModel(private val model: Model<Joke, Error>) {
             override fun provideError(error: Error) {
                 textCallback.provideText(error.message())
             }
-
         })
     }
 

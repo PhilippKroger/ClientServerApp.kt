@@ -1,6 +1,5 @@
 package com.example.clientserverappkt
 
-
 interface Model<S, E> {
     fun fetch()
     fun clear()
@@ -10,5 +9,4 @@ interface Model<S, E> {
 interface ResultCallback<S, E> {
     fun provideSuccess(data: S)
     fun provideError(error: E)
-
 }
